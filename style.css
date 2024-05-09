@@ -1,0 +1,680 @@
+/* utilis */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+/* google fonts */
+
+/* 
+font-family: "Poppins", sans-serif;
+font-family: "Roboto", sans-serif;
+*/
+
+/* css variable */
+:root {
+  --bg1: #fff0e7;
+  --bg2: #f8953e;
+  --bg3: #560505;
+  --txt1: rgb(253, 251, 250);
+}
+
+/* to start default page margin , padding to 0 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header-text {
+  font-size: 2.1vmax;
+}
+
+.subheader-text {
+  font-size: 21px;
+}
+
+.bold-text {
+  font-weight: bolder;
+}
+
+.subheader2-text {
+  font-size: 1.2vmax;
+}
+
+.colored-text {
+  color: var(--bg2);
+}
+
+/* container */
+.container {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* homepage********* */
+
+/* navbar */
+
+.navbar {
+  display: flex;
+  /* using flexbox to make styling easy everything in a box and properties like space around , align items to center*/
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1.1vmax;
+  /* for dynamic fontSize */
+  background-color: var(--bg1);
+  position: sticky;
+  padding: 20px;
+}
+
+#logo {
+  width: 100px;
+}
+
+#logo img {
+  width: 100%;
+}
+
+#navlinks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  gap: 15px;
+}
+
+#navlinks li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+
+#navlinks li:last-child {
+  border-right: none;
+}
+
+#navlinks p {
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  color: brown;
+}
+
+#navlinks p:hover {
+  border-bottom: 3px solid var(--bg2);
+}
+
+#booking button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  justify-content: space-between;
+  font-size: 1.2vmax;
+  gap: 10px;
+  background-color: var(--bg2);
+  color: white;
+  cursor: pointer;
+}
+#booking button i {
+  color: white;
+}
+
+#booking button:hover {
+  cursor: pointer;
+  background: #560505;
+}
+
+#help button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--bg2);
+  border-radius: 30px;
+  justify-content: space-between;
+  font-size: 1.2vmax;
+  gap: 10px;
+  background: var(--bg1);
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+#help button:hover {
+  background-color: var(--bg2);
+  color: whitesmoke;
+}
+
+#menu {
+  display: none;
+}
+
+/* hero section of home page */
+.hero-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px;
+  background-color: #b4c0a6;
+  height: 70vh;
+  position: relative;
+}
+
+.hero-content {
+  /* max-width: 50% */
+  /* width: 35vw; */
+  /* position: relative; */
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 18px;
+  flex: 1;
+}
+
+.buy-now-btn {
+  display: inline-block;
+  padding: 10px 50px;
+  background-color: var(--bg2);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-now-btn:hover {
+  background-color: #560505;
+}
+
+.hero-image {
+  /* object-fit: contain; */
+  width: 100%;
+  height: 100%;
+  /* background: green; */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image img {
+  border-radius: 15px;
+  max-width: 65%;
+}
+
+/* User Base */
+
+.User-base {
+  /* height: 20vh; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+  /* padding: 10px; */
+}
+
+.section-content {
+  max-width: 40%;
+}
+
+.section-content span {
+  color: var(--bg2);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-text {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.rating-info {
+  font-size: 14px;
+}
+
+/* location */
+.locate {
+  /* max-width: 40%; */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.input-dropdown {
+  width: 100%;
+}
+
+.rounded-input {
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #979797;
+  font-size: 15px;
+}
+
+.locate-btn {
+  padding: 10px 20px;
+  background-color: var(--bg2);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.locate-btn:hover {
+  background-color: var(--bg3);
+}
+
+/* services ************************/
+
+.services {
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--bg1);
+  font-weight: bold;
+  padding: 30px;
+}
+
+.services .header-text:hover {
+  text-decoration: underline var(--bg2);
+}
+
+.service-subheading {
+  font-size: 15px;
+}
+
+.section-heading h2 {
+  font-size: 24px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 60vw;
+  /* height: 50vh; */
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: space-around;
+  padding: 12px;
+}
+
+.service-card {
+  text-align: center;
+  width: 170px;
+  height: 130px;
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.5s linear;
+  margin: 10px 0;
+}
+
+.service-card:hover {
+  border: 2px solid var(--bg2);
+}
+
+.service-card img {
+  width: 55%;
+  /* height: auto; */
+}
+
+.explore-treatments {
+  /* margin-top: 40px; */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-icon {
+  margin-right: 10px;
+}
+
+.explore-link:hover {
+  color: #007bff;
+}
+
+/* add hover to text  */
+
+/* Contact Us ********************/
+
+#contact {
+  width: 100vw;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-form {
+  text-align: center;
+
+  padding: 30px;
+  border-radius: 20px;
+  width: 30vw;
+  background: var(--bg1);
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  transition: all 0.3s linear;
+}
+
+.contact-form:hover {
+  border: 2px solid var(--bg2);
+}
+
+.form-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-subheading {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.rounded-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: var(--bg2);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.submit-button:hover {
+  background-color: var(--bg3);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #fbf5fe;
+  padding: 20px;
+  border-radius: 9px;
+  margin-bottom: 20px;
+  width: 30vw;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: all 0.3s linear;
+}
+
+.card:hover {
+  border: 1px solid #9e07ea;
+}
+
+.card:last-child {
+  background-color: #e0f2ef;
+  transition: all 0.3s linear;
+}
+
+.card:last-child:hover {
+  border: 1px solid #02d2af;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-subheading {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card-image {
+  width: 25%;
+  height: auto;
+  /* border-radius: 5px; */
+}
+
+.locate-text {
+  margin-top: 10px;
+  font-size: 14px;
+  /* text-align: center; */
+  color: #0303ad;
+  cursor: pointer;
+}
+
+.locate-text:hover {
+  color: #007bff;
+}
+
+/* FAQ section********* */
+
+#query-section {
+  width: 100vw;
+  /* height: 50vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  /* padding: 70px auto; */
+}
+
+.question-grid {
+  width: 75vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.question-card {
+  height: 10vh;
+  border-bottom: 1px solid #dbdada;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question {
+  font-size: 18px;
+}
+
+.fa-solid {
+  color: var(--bg2);
+  cursor: pointer;
+}
+
+/* footer */
+
+footer {
+  /* height: 450px; */
+  background-image: url(./images/footerBg.png);
+  background-size: cover;
+  padding: 60px 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 60vh; */
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-container {
+  /* max-width: 928px; */
+  margin: 0 auto;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: 70vw;
+}
+
+.footer-column {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  width: 100%;
+}
+.social-icons li i {
+  font-size: 28px;
+}
+
+h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+footer p {
+  color: wheat;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 480px) {
+  .question-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .hero-image {
+    display: none;
+  }
+
+  .User-base {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .services-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service-card {
+  }
+  .services h2 {
+    font-size: 16px;
+  }
+  #contact {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-form {
+    width: 100%;
+  }
+  .card-container {
+    width: 100%;
+    padding: 20px;
+  }
+  .card {
+    width: 100%;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-column {
+    width: 100%;
+  }
+  .footer-column ul {
+    display: none;
+  }
+  .social-icons {
+    display: flex !important;
+    justify-content: flex-start;
+  }
+  footer {
+    width: 100vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+  .subheader2-text {
+    width: 100%;
+    padding: 10px;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  #navlinks {
+    display: none;
+  }
+  #booking {
+    display: none;
+  }
+  #help {
+    display: none;
+  }
+  #menu {
+    display: inline;
+    font-size: 30px;
+  }
+}
